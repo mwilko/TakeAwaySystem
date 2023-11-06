@@ -4,10 +4,10 @@
 //
 //  Created by Max Wilkinson on 13/10/2023.
 //
-
-#ifndef Item_hpp
-#define Item_hpp
+//
+#ifndef Item_h
+#define Item_h
 
 #include <stdio.h>
 
-#endif /* Item_hpp */
+#endif /* Item_h */
