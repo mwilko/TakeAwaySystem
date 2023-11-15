@@ -7,17 +7,30 @@
 //
 #include "Menu.h"
 #include <iostream>
-#include <ostream>
+#include <fstream>
 using namespace std;
 
-string ExtractTextFile(){
-    string fileContent = "menu.csv";
-    return fileContent;
+Menu::Menu(string file){
+    ifstream fileContent(file);
+    count = 0;
+    if (!fileContent)//error handling: there is no file named as the parameter given, statement is ran
+    {
+        cerr << "Error opening file " << file << ": " << strerror(errno) << endl;
+        return;  // Add this line to exit the function if the file cannot be opened
+    }
+    string item;
+    while (getline(fileContent, item)) {
+        count++;
+        item = "," + item;
+        items.push_back(count + &item);//stores each value in the vector as a pointer
+        //cout << count << item <<endl;
+    }
+    fileContent.close();
+    
 }
 
-
-string MakeMenu(){
-    string menu = "Make Menu Function";
+string Menu::ToString(){
+    string menu = NULL;
+    
     return menu;
 }
-

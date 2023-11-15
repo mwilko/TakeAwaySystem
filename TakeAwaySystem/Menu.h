@@ -8,11 +8,17 @@
 #ifndef Menu_h
 #define Menu_h
 
-#include <stdio.h>
-#include <string>
-using namespace  std;
+#include "ItemList.h"
 
-string ExtractTextFile();
-string MakeMenu();
+class Menu : ItemList//class Menu inherits from ItemList class
+{
+private:
+    int count = NULL;
+    
+public:
+    Menu(std::string file = "null");
+    std::string ToString();//derived function
+};
+
 
 #endif /* Menu_h */

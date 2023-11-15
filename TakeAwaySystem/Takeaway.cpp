@@ -21,16 +21,26 @@ Good luck!
 #include <vector>
 #include <cstring>
 
+#include <iostream>
+#include <filesystem>
+
 //
 using namespace std;
+//int main(){
+//    Menu menu = Menu("menu.csv");
+//    cout << "Press any key to quit...";
+//    std::getchar();
+//}
+
 
 int main()
 {
     string userCommand;
     vector <string> parameters;
 
+    std::cout << "Current working directory: " << std::filesystem::current_path() << std::endl;
     // Create a menu object from a CSV file
-    //Menu menu = Menu("menu.csv");
+    Menu menu = Menu("menu.csv");
 
     // Create an order object
     //Order order = Order();
