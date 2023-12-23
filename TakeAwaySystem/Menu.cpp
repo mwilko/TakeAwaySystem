@@ -10,27 +10,44 @@
 #include <fstream>
 using namespace std;
 
-Menu::Menu(string file){
+Menu::Menu(string file) {
     ifstream fileContent(file);
     count = 0;
-    if (!fileContent)//error handling: there is no file named as the parameter given, statement is ran
-    {
+    if (!fileContent) {
+        //displays error message with the reason of the error (e.g cannot find file directory)
         cerr << "Error opening file " << file << ": " << strerror(errno) << endl;
-        return;  // Add this line to exit the function if the file cannot be opened
+        return;
     }
-    string item;
-    while (getline(fileContent, item)) {
+    string line;
+    //iterates through all lines in file
+    while (getline(fileContent, line)) {
         count++;
-        item = "," + item;
-        items.push_back(count + &item);//stores each value in the vector as a pointer
-        //cout << count << item <<endl;
+        line = "," + line;
+        Item* newItem = new Item(line);//each iteration, the line is stored as a reference
+        items.push_back(newItem);//add to the items vector
+        cout << count << line << endl;
     }
     fileContent.close();
-    
 }
 
-string Menu::ToString(){
+//getter function to return vector since its a private variable in 'Item.h'
+std::vector<Item*>& Menu::getItems(){
+    return items;
+}
+
+
+
+// display menu in attractive way, group items with corresponding type
+// (appetiser, maincourse, beverage)
+string Menu::toString() const{
     string menu = NULL;
     
+    cout << "-------- Max's Club House --------" << endl;
+    
+    
     return menu;
+}
+
+Menu::~Menu(){
+    cout << "Menu destructor called" << endl;
 }

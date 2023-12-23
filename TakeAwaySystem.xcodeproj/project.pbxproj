@@ -16,6 +16,7 @@
 		2C7154642AD9877400733C2B /* Beverage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2C7154632AD9877400733C2B /* Beverage.cpp */; };
 		2C7154662AD9879000733C2B /* Appetiser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2C7154652AD9879000733C2B /* Appetiser.cpp */; };
 		2C87208B2AD9768D00B2E438 /* Takeaway.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2C87208A2AD9768D00B2E438 /* Takeaway.cpp */; };
+		2CECB0522B37392D001FE109 /* Input.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2CECB0502B37392D001FE109 /* Input.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +50,8 @@
 		2C7154652AD9879000733C2B /* Appetiser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Appetiser.cpp; sourceTree = "<group>"; };
 		2C8720872AD9768D00B2E438 /* TakeAwaySystem */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TakeAwaySystem; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C87208A2AD9768D00B2E438 /* Takeaway.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Takeaway.cpp; sourceTree = "<group>"; };
+		2CECB0502B37392D001FE109 /* Input.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Input.cpp; sourceTree = "<group>"; };
+		2CECB0512B37392D001FE109 /* Input.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Input.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				2C87208A2AD9768D00B2E438 /* Takeaway.cpp */,
+				2CECB0502B37392D001FE109 /* Input.cpp */,
+				2CECB0512B37392D001FE109 /* Input.h */,
 				2C7154542AD9786000733C2B /* Item.cpp */,
 				2C7154552AD9786000733C2B /* Item.h */,
 				2C7154572AD9786E00733C2B /* Menu.cpp */,
@@ -164,6 +169,7 @@
 				2C7154662AD9879000733C2B /* Appetiser.cpp in Sources */,
 				2C7154622AD9876100733C2B /* ItemList.cpp in Sources */,
 				2C71545C2AD9787A00733C2B /* Order.cpp in Sources */,
+				2CECB0522B37392D001FE109 /* Input.cpp in Sources */,
 				2C87208B2AD9768D00B2E438 /* Takeaway.cpp in Sources */,
 				2C7154602AD9873F00733C2B /* MainCourse.cpp in Sources */,
 			);

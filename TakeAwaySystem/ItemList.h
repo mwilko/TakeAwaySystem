@@ -8,17 +8,17 @@
 #ifndef ItemList_h
 #define ItemList_h
 
+#include <vector>
+#include "Item.h"
 #include <iostream>
 
-//ItemList is an abstract class, all functions need to be virual
-class ItemList
-{
-private:
-    
+
+class ItemList {
+protected:
+    std::vector<Item*> items;
+
 public:
-    //instances of the item class should be stored by reference as a vector of pointers
-    std::vector<std::string*> items;
-    virtual std::string toString();
+    virtual std::string toString() const = 0;
 };
 
-#endif /* ItemList_h */
+#endif /* ItemList.h */

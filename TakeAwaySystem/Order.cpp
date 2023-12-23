@@ -16,12 +16,17 @@ string Order::printReceipt(){
     string reciept = NULL;
     
     
-    return reciept;
+    return "Receipt has been made and saved to a text file";
 }
 
-void Order::addItem(){    
-    cout << "Enter the " ;
+void Order::add(Item* choice){
+    cout << "Item: " << endl;
 }
-void Order::removeItem(){
+void Order::remove(Item* choice){
     
+}
+
+string Order::toString() const{
+    string order = NULL;
+    return order;
 }

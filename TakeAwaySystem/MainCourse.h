@@ -13,6 +13,6 @@
 class MainCourse : Item
 {
     
-}
+};
 
 #endif /* MainCourse_h */

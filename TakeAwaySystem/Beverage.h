@@ -16,7 +16,7 @@ private:
     int volume; //volume of beverage (ml): integer variable
 public:
     bool isAlcoholic();
-    std::string toString();
+    std::string toString() const override;
 };
 
 #endif /* Beverage_h */

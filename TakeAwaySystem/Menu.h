@@ -16,8 +16,13 @@ private:
     int count = NULL;
     
 public:
-    Menu(std::string file = "null");
-    std::string ToString();//derived function
+    //loads menu object from file path (path = parameter)
+    Menu(std::string file);
+    std::vector<Item*>& getItems();//getter function to access private vector 'items'
+    
+    //display whole menu in attractive way (structure: a, m, b)
+    std::string toString() const override;//derived function
+    ~Menu();
 };
 
 

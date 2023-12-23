@@ -7,4 +7,16 @@
 
 #include "Item.h"
 
+Item::Item(const std::string& itemName) : _item(new Item(itemName)){
+    
+}
 
+std::string Item::toString() const{
+    std::string item;
+    
+    return item;
+}
+
+Item::~Item(){
+    delete _item;
+}

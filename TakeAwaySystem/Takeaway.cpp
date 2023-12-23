@@ -20,30 +20,21 @@ Good luck!
 #include <iostream>
 #include <vector>
 #include <cstring>
-
 #include <iostream>
-#include <filesystem>
-
 //
 using namespace std;
-//int main(){
-//    Menu menu = Menu("menu.csv");
-//    cout << "Press any key to quit...";
-//    std::getchar();
-//}
-
 
 int main()
 {
+//    cout << "Hello World!" << endl;
     string userCommand;
     vector <string> parameters;
 
-    std::cout << "Current working directory: " << std::filesystem::current_path() << std::endl;
     // Create a menu object from a CSV file
     Menu menu = Menu("menu.csv");
 
-    // Create an order object
-    //Order order = Order();
+    //  Create an order object
+    Order order = Order();
 
     while (userCommand != "exit")
     {
@@ -63,13 +54,28 @@ int main()
         string command = parameters[0];
 
         if (command.compare("menu") == 0) {
-            //cout << menu.toString();
+            cout << menu.toString();
         }
         else if (command.compare("add") == 0)
         {
-            //Item* choice; // you need to instantiate this using the menu object!
-            //order.add(choice);
+            int numericValue = NULL;
+            cout << "Enter choice based on numeric value on Menu: " ;
+            cin >> numericValue;
+            
+            //stores the output from the getter function to vector
+            std::vector<Item*>& menuItems = menu.getItems();
+            for (int i = 0; i < menuItems.size(); ++i) {
+                // Check if the numeric value matches the current index
+                if (numericValue == i + 1) {
+                    //if matches, save the index to the choice pointer object
+                    Item* choice = menuItems[i];
+                    
+                    order.add(choice);
 
+                    //exit loop when item is added
+                    break;
+                }
+            }
             // You may also wish to implement the ability to add multiple items at once!
             // e.g. add 1 5 9
         }

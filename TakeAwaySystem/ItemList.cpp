@@ -10,7 +10,7 @@ using namespace std;
 
 
 vector <ItemList> items;
-string ItemList::toString()//base function
+string ItemList::toString() const//base function
 {
     return "hi";
 };

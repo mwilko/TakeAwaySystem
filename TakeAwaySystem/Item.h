@@ -12,11 +12,16 @@
 
 
 class Item {
+private:
     int calories;
     std::string name;
     double price;
+    Item* _item;
     
 public:
-    std::string toString();
+    Item(const std::string& itemName);
+    virtual std::string toString() const;
+    ~Item();
+
 };
 #endif /* Item_h */

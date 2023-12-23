@@ -11,12 +11,13 @@
 #include "Item.h"
 
 
-class Appetiser : Item{
+class Appetiser : public Item{
+private:
     bool shareable;
     bool twoForOne;
     
 public:
-    std::string toString();
+    std::string toString() const override;
 };
 
 #endif /* Appetiser_h */
