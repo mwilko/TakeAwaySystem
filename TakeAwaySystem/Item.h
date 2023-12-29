@@ -10,18 +10,18 @@
 
 #include <iostream>
 
-
 class Item {
-private:
-    int calories;
-    std::string name;
-    double price;
-    Item* _item;
-    
 public:
-    Item(const std::string& itemName);
-    virtual std::string toString() const;
-    ~Item();
+    Item(const std::string& itemName, double itemPrice, double itemCalories);
+    virtual ~Item();
 
+    virtual std::string toString() const;
+    virtual void getItemVariables() const;
+
+private:
+    std::string _name;
+    double _price;
+    double _calories;
 };
+
 #endif /* Item_h */

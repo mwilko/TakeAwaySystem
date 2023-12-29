@@ -8,10 +8,17 @@
 #include "ItemList.h"
 using namespace std;
 
+ItemList::ItemList(){
+    
+}
 
 vector <ItemList> items;
 string ItemList::toString() const//base function
 {
     return "hi";
 };
+
+ItemList::~ItemList(){
+    
+}
 

@@ -15,10 +15,12 @@
 
 class ItemList {
 protected:
-    std::vector<Item*> items;
+    std::vector<Item*> items;//can be accessed by inherited classes
 
 public:
+    ItemList();
     virtual std::string toString() const = 0;
+    virtual ~ItemList();
 };
 
 #endif /* ItemList.h */

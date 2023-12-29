@@ -10,14 +10,18 @@
 
 #include "Item.h"
 
+class Appetiser : public Item {
+public:
+    Appetiser(std::string& name, double price, int calories, bool shareable, bool twoForOne);
+    virtual ~Appetiser();
 
-class Appetiser : public Item{
+    std::string toString() const override;
+    bool isShareable() const;
+    bool isTwoForOne() const;
+
 private:
     bool shareable;
     bool twoForOne;
-    
-public:
-    std::string toString() const override;
 };
 
 #endif /* Appetiser_h */

@@ -10,13 +10,20 @@
 
 #include "Item.h"
 
-class Beverage : Item {
-private:
-    double abv; //alcohol by volume: double variable
-    int volume; //volume of beverage (ml): integer variable
+class Beverage : public Item {
 public:
-    bool isAlcoholic();
+    Beverage(const std::string& name, double calories, double price, const std::string& type, double volume, double abv);
+
     std::string toString() const override;
+
+    const std::string& getType() const;
+    double getVolume() const;
+    double getAbv() const;
+
+private:
+    std::string type;
+    double volume;
+    double abv;
 };
 
 #endif /* Beverage_h */

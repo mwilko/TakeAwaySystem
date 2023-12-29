@@ -10,9 +10,10 @@
 
 #include "Item.h"
 
-class MainCourse : Item
-{
-    
+class MainCourse : public Item {
+public:
+    MainCourse(const std::string& itemName, double itemPrice, int itemCalories);
+    virtual ~MainCourse();
 };
 
 #endif /* MainCourse_h */
